@@ -56,7 +56,8 @@ const getOrderedProductsBySeller = async (req, res) => {
     const sellerId = req.params.id;
 
     const ordersWithSellerId = await Order.find({
-      "orderedProducts.sellerId": sellerId,
+      // ERROR : ==> sellerId
+      "orderedProducts.seller": sellerId,
     });
 
     if (ordersWithSellerId.length > 0) {
