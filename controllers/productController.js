@@ -124,6 +124,7 @@ const searchProduct = async (req, res) => {
       res.send({ message: "No products found" });
     }
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 };
@@ -217,10 +218,10 @@ const deleteProductReview = async (req, res) => {
   try {
     const { reviewId } = req.body;
     const productId = req.params.id;
-
     const product = await Product.findById(productId);
 
     const updatedReviews = product.reviews.filter(
+      // ERROR : ==> string
       (review) => review._id != reviewId
     );
 

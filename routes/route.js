@@ -56,8 +56,10 @@ router.get("/searchProductbySubCategory/:key", searchProductbyCategory);
 
 router.delete("/DeleteProduct/:id", deleteProduct);
 router.delete("/DeleteProducts/:id", deleteProducts);
-router.delete("/deleteProductReview/:id", deleteProductReview);
-router.put("/deleteAllProductReviews/:id", deleteAllProductReviews);
+// ERROR : ==> changed to put from delete as per postman collection
+router.put("/deleteProductReview/:id", deleteProductReview);
+// ERROR : ==> changed to delete from put
+router.delete("/deleteAllProductReviews/:id", deleteAllProductReviews);
 
 // Customer
 router.post("/CustomerRegister", customerRegister);

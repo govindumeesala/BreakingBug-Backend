@@ -25,7 +25,6 @@ const sellerRegister = async (req, res) => {
     } else {
       let result = await seller.save();
       result.password = undefined;
-      // ERROR : ==>
       const token = createNewToken(result._id);
 
       result = {
