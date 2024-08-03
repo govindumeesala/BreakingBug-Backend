@@ -9,7 +9,8 @@ const sellerRegister = async (req, res) => {
 
     const seller = new Seller({
       ...req.body,
-      password: bcrypt.hash,
+      // ERROR : ==> hashedPass
+      password: hashedPass,
     });
 
     const existingSellerByEmail = await Seller.findOne({
@@ -55,11 +56,16 @@ const sellerLogIn = async (req, res) => {
 
         seller = {
           ...seller._doc,
-          token: tokens,
+          // ERROR : ==> Typo
+          token: token,
         };
 
         res.send(seller);
       } else {
+        console.log("Password from request:", req.body.password);
+        console.log("Hashed password from DB:", seller.password);
+        console.log("Validation result:", validated);
+
         res.send({ message: "Invalid password" });
       }
     } else {
