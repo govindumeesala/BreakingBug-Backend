@@ -48,7 +48,8 @@ const orderSchema = new mongoose.Schema({
         },
       },
       subcategory: {
-        type: mongoose.Schema.Types.ObjectId,
+        // Error : ==> string should be used
+        type: String,
       },
       productImage: {
         type: String,
