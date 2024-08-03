@@ -3,6 +3,7 @@
 <img src="https://images.prismic.io/ieeemuj/Zqu58B5LeNNTxuyE_BreakingBugBanner.png?auto=format,compress" alt="Breaking Bug Poster">
 
 ## Table of Content
+- [Errors Doc](#Errors-doc)
 - [Introduction](#introduction)
 - [Pre-requisites](#pre-requisites)
 - [How to get started?](#how-to-get-started)
@@ -11,6 +12,9 @@
 - [Postman Collection](#postman-collection)
 - [Database Schema](#database-schema)
 - [Credits](#made-by-ieee-computer-society--manipal-university-jaipur)
+
+### Errors doc
+- [Bugs document Link](https://docs.google.com/document/d/1JZWFBOSvC7CZsmU5XZrMNdWuGv0YfIsMIDGqqXaE6mg/edit?usp=sharing)
 
 ### Introduction
 This repository contains the backend code for the Breaking Bug event. The event is organized by IEEE Computer Society, Manipal University Jaipur.\
