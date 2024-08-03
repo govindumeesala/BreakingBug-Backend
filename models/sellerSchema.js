@@ -1,28 +1,30 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
 
 const sellerSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true,
-    },
-    email: {
-        type: String,
-        unique: true,
-        required: true,
-    },
-    password: {
-        type: String,
-        required: true,
-    },
-    role: {
-        type: String,
-        default: "seller"
-    },
-    shopName: {
-        type: String,
-        unique: true,
-        required: true
-    }
+  name: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    unique: true,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  role: {
+    type: String,
+    default: "seller",
+  },
+  shopName: {
+    type: String,
+    unique: true,
+    required: true,
+  },
 });
 
-moduleexports = mongoose.model("seller", sellerSchema)
+// ERROR : ==> incorrect syntax
+module.exports =
+  mongoose.models.seller || mongoose.model("seller", sellerSchema);
