@@ -38,6 +38,7 @@ const getOrderedProductsByCustomer = async (req, res) => {
     let orders = await Order.find({ buyer: req.params.id });
 
     const orderedProducts = orders.reduce((accumulator, order) => {
+      // ERROR : ==>
       return [...accumulator, ...order.orderedProducts];
     }, []);
 
